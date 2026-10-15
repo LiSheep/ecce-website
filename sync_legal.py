@@ -44,7 +44,9 @@ def render_document(name, title):
 <header class="site-header"><a href="index.html" aria-label="lapo 首页"><img class="logo" src="assets/logo.png" alt="lapo" width="132" height="66"></a></header>
 <main id="main" class="legal"><a class="back" href="index.html#agreements">返回官网</a>
 <article><h1>{html.escape(lines[0])}</h1>{content}</article></main>
-<footer class="site-footer"><span>lapo · 协议与保护规则</span>{links}</footer></body></html>
+<footer class="site-footer"><span>lapo · 协议与保护规则</span>{links}
+<p class="filing"><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">粤ICP备2026011826号</a></p>
+</footer></body></html>
 '''
     (ROOT / f"{name}.html").write_text(page, encoding="utf-8")
 
